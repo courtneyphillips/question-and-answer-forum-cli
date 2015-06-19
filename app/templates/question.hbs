@@ -1,0 +1,104 @@
+<div class="container">
+  {{#if isEditing}}
+  <h1>{{title}}</h1>
+  <div class="container round-box">
+    <h1>
+      <span class="glyphicon glyphicon-wrench intro" aria-hidden="true"></span>
+    </h1>
+    <h2 class="intro">
+      Edit Question
+    </h2>
+    <form>
+      <div class="form-group">
+        <label for="title"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;Question</label>
+        {{input value=title id="title" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="author"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Author</label>
+        {{input value=author id="author" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="body"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;Description</label>
+        {{textarea value=description id="description" class="form-control" rows="6"}}
+      </div>
+      <button class="btn btn-default btn-block" {{action 'save'}}>Save</button>
+    </form>
+  </div>
+  {{else}}
+  <div class="round-box">
+    <h1 class="intro">
+      <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+    </h1>
+    <h1>
+      {{title}}
+    </h1>
+    <hr>
+    <div class="row">
+      <br>
+      <div class="col-md-2 question-page">
+        <h4>
+          <b>
+            Author:
+          </b>
+        </h4>
+      </div>
+      <div class="col-md-9 question-page">
+        {{author}}
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2 question-page">
+        <h4>
+          <b>
+            Description:
+          </b>
+        </h4>
+      </div>
+      <div class="col-md-9 question-page">
+        {{description}}
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-default btn-block" {{action 'edit'}}>Edit</button>
+    <button class="btn btn-default btn-block" {{action 'delete'}}>Delete Question</button>
+  </div>
+  <br>
+  {{/if}}
+  {{outlet}}
+</div>
+<section id="download" class="content-section text-center">
+  <div class="download-section">
+    <h2>
+      Answers
+    </h2>
+    <div class="container">
+      {{#if answers}}
+      {{#each answer in answers itemController="answer"}}
+      <div class="round-box question-page">
+        {{answer.text}}
+        <br>
+        <br>
+        <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="round-box">
+        <h1>
+          <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+        </h1>
+        <h4>
+          It looks like there aren't any answers to this question yet! Add one below.
+        </h4>
+      </div>
+      {{/if}}
+      <br>
+      <br>
+      {{#link-to 'new-answer' this class="btn btn-default btn-block"}}
+      <span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New answer{{/link-to}}
+    </div>
+    <br>
+  </div>
+</section>
+
+{{outlet}}

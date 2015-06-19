@@ -1,1 +1,18 @@
+<div class="container round-box">
+  <h1>
+    <span class="glyphicon glyphicon-ok intro" aria-hidden="true"></span>
+  </h1>
+  <h2 class="intro">
+    New Answer
+  </h2>
+  <form>
+    <div class="form-group">
+      <label for="text">Your Answer:</label>
+      {{textarea value=text id="text" class="form-control" rows="5"}}
+    </div>
+    <br>
+    <button class="btn btn-default btn-block" {{action "save"}}>Add your Answer</button>
+  </form>
+</div>
+
 {{outlet}}

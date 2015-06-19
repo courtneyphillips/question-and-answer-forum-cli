@@ -12,8 +12,7 @@ export default Ember.Controller.extend({
       var controller = this;
       answer.get('question').then(function(question) {
         controller.transitionToRoute('question', question);
-            });
-
+      });
     }
   }
 });

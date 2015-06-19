@@ -12,5 +12,6 @@ Router.map(function() {
   });
   this.resource('new-question');
   this.resource('answers');
+  // this.route('questions');
 });
 export default Router;

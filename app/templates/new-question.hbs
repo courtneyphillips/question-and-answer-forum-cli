@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="round-box">
+    <h1>
+      <span class="glyphicon glyphicon-pencil intro" aria-hidden="true"></span>
+    </h1>
+    <h1 class="title">New Question</h1><hr>
+    <form>
+      <div class="form-group">
+        <label for="title"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;Question</label>
+        {{input value=title id="title" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="author"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Author</label>
+        {{input value=author id="author" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="body"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;Description</label>
+        {{textarea value=description id="description" class="form-control" rows="6"}}
+      </div><br>
+      <button class="btn btn-default btn-block" {{action 'save'}}>Save</button>
+    </form>
+  </div>
+</div>

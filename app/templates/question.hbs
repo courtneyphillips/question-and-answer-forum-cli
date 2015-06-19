@@ -76,11 +76,9 @@
       {{#if model.answers}}
       {{#each answer in model.answers}}
       <div class="round-box question-page">
-        {{answer.date}}<br>
+        {{answer.answerdate}}<br>
         {{answer.text}}
         <br>
-        <br>
-        <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
       </div>
       {{/each}}
       {{else}}

@@ -18,10 +18,12 @@ export default Ember.Controller.extend({
       var title = this.get('title');
       var author = this.get('author');
       var description = this.get('description');
+      var date = new Date();
       question.set('title', title);
       question.set('author', author);
       question.set('description', description);
-      question.save()
+      question.set('date', date);
+      question.save();
     }
   }
 });

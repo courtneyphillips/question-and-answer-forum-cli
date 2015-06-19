@@ -5,7 +5,9 @@ export default Ember.Controller.extend({
     save: function() {
       var answer = this.get('model');
       var text = this.get('text');
+      var date = new Date();
       answer.set('text', text);
+      answer.set('date', date);
       answer.save();
       var controller = this;
       answer.get('question').then(function(question) {

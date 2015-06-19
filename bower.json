@@ -13,6 +13,7 @@
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
     "bootstrap": "~3.3.5",
-    "moment": "~2.10.3"
+    "moment": "~2.10.3",
+    "firebase": "^2.1.0"
   }
 }

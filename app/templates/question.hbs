@@ -1,4 +1,4 @@
-<!-- <div class="container"> -->
+<div class="container">
   {{#if isEditing}}
   <h1>{{question.title}}</h1>
   <div class="container round-box">
@@ -6,7 +6,7 @@
       <span class="glyphicon glyphicon-wrench intro" aria-hidden="true"></span>
     </h1>
     <h2 class="intro">
-      Edit Question
+      Edit Question:
     </h2>
     <form>
       <div class="form-group">
@@ -66,7 +66,6 @@
   <br>
   {{/if}}
 
-  <!-- {{outlet}}
 </div>
 <section id="download" class="content-section text-center">
   <div class="download-section">
@@ -74,8 +73,8 @@
       Answers
     </h2>
     <div class="container">
-      {{#if answers}}
-      {{#each answer in answers itemController="answer"}}
+      {{#if model.answers}}
+      {{#each answer in model.answers}}
       <div class="round-box question-page">
         {{answer.text}}
         <br>
@@ -95,11 +94,11 @@
       {{/if}}
       <br>
       <br>
-      {{#link-to 'new-answer' this class="btn btn-default btn-block"}}
+      {{#link-to 'new-answer' class="btn btn-default btn-block"}}
       <span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New answer{{/link-to}}
     </div>
     <br>
   </div>
 </section>
 
-{{outlet}} -->
+{{outlet}}

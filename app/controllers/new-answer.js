@@ -10,7 +10,6 @@ export default Ember.Controller.extend({
       answer.set('answerdate', date);
       answer.save();
       var controller = this;
-      debugger;
       answer.get('question').then(function(question) {
         controller.transitionToRoute('question', question);
       });

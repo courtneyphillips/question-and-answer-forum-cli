@@ -14,6 +14,14 @@ export default Ember.Controller.extend({
     },
     save: function() {
       this.set('isEditing', false);
+      var question = this.get('model');
+      var title = this.get('title');
+      var author = this.get('author');
+      var description = this.get('description');
+      question.set('title', title);
+      question.set('author', author);
+      question.set('description', description);
+      question.save()
     }
   }
 });

@@ -1,6 +1,6 @@
-<div class="container">
+<!-- <div class="container"> -->
   {{#if isEditing}}
-  <h1>{{title}}</h1>
+  <h1>{{question.title}}</h1>
   <div class="container round-box">
     <h1>
       <span class="glyphicon glyphicon-wrench intro" aria-hidden="true"></span>
@@ -30,7 +30,7 @@
       <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
     </h1>
     <h1>
-      {{title}}
+      {{model.title}}
     </h1>
     <hr>
     <div class="row">
@@ -43,7 +43,7 @@
         </h4>
       </div>
       <div class="col-md-9 question-page">
-        {{author}}
+        {{model.author}}
       </div>
     </div>
     <br>
@@ -56,7 +56,7 @@
         </h4>
       </div>
       <div class="col-md-9 question-page">
-        {{description}}
+        {{model.description}}
       </div>
     </div>
     <br>
@@ -65,7 +65,8 @@
   </div>
   <br>
   {{/if}}
-  {{outlet}}
+
+  <!-- {{outlet}}
 </div>
 <section id="download" class="content-section text-center">
   <div class="download-section">
@@ -101,4 +102,4 @@
   </div>
 </section>
 
-{{outlet}}
+{{outlet}} -->

@@ -1,0 +1,58 @@
+.nav li {
+  float: left; list-style-type: none;
+}
+
+.jumbotron {
+  margin-bottom: -5px;
+}
+
+/*.questions-list {
+  margin-right: 30px;
+  margin-left: auto;
+}*/
+
+.btn-xs {
+  align: right;
+}
+
+.well {
+  padding: 45px;
+}
+
+.brand-heading {
+  margin-top: 100px;
+}
+
+.small {
+  font-size: 80%;
+}
+
+body {
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+.download {
+  margin-top: -100px;
+}
+
+.round-box {
+  border-radius: 25px;
+  border: 2px solid white;
+  padding: 40px;
+  width: auto;
+  height: auto;
+  margin: 10px;
+}
+
+.question-page {
+  font-size: 120%;
+}
+
+.col-md-2 {
+  color: #B8B8B8;
+}
+
+.glyphicon {
+  color: #42dca3;
+}

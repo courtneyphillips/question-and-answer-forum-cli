@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
       this.set('title', '');
       this.set('description', '');
       this.set('author', '');
-      this.route('questions');
+      this.transitionToRoute('questions');
     }
   }
 });

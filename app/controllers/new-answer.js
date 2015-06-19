@@ -7,14 +7,13 @@ export default Ember.Controller.extend({
       var text = this.get('text');
       var date = new Date();
       answer.set('text', text);
-      answer.set('answerdate', date);
+      answer.set('date', date);
       answer.save();
-      this.set('text', '');
       var controller = this;
       answer.get('question').then(function(question) {
-        question.save();
         controller.transitionToRoute('question', question);
-      });
+            });
+
     }
   }
 });

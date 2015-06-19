@@ -6,7 +6,8 @@ export default Ember.Route.extend({
     var answer = this.store.createRecord('answer');
     question.get('answers').then(function(answers) {
       answers.pushObject(answer);
+      question.save();
     });
     return answer;
-  }
+    }
 });

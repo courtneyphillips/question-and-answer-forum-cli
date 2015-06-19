@@ -1,3 +1,30 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li>
+        {{#link-to 'questions'}}All Questions{{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'new-question'}}New Question{{/link-to}}
+      </li>
+      <li>
+        <a href="https://github.com/courtneyphillips/question-and-answer-forum">See on Github</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="brand-heading"><em>gnarl</em>EDGE</h1>
+          <p class="intro-text">Your one-stop-shop for expert knowledge and Q&amp;A from the leading experts on wilderness survival and nature.</p></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <br>
+  <br>
 
 {{outlet}}
